@@ -1,0 +1,253 @@
+/* weather page css */
+/* Import Google Font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* weather box css */
+.main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10%;
+}
+::selection{
+  color: #fff;
+}
+/* weather input box */
+.wrapper{
+  width: 400px;
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.05);
+  margin-bottom: 5%;
+}
+.wrapper.active{
+  width: 1080px;
+}
+/* weather input header */
+.wrapper header{
+  display: flex;
+  font-size: 21px;
+  font-weight: 500;
+  color: #43AFFC;
+  padding: 16px 15px;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+}
+/* weather input box back button */
+header i{
+  font-size: 0em;
+  cursor: pointer;
+  margin-right: 8px;
+}
+/* content in the box */
+.content{
+  display: flex;
+  flex-direction: column;
+}
+/* making visible back button */
+.wrapper.active header i{
+  margin-left: 5px;
+  font-size: 30px;
+}
+
+/* city name field box */
+.wrapper .input-part{
+  margin: 20px 25px 30px;
+}
+/* to hide the input part after entered city */
+.wrapper.active .input-part{
+  display: none;
+}
+/* to display error message */
+.input-part .info-txt{
+  display: none;
+  font-size: 17px;
+  text-align: center;
+  padding: 12px 10px;
+  border-radius: 7px;
+  margin-bottom: 15px;
+}
+.input-part .info-txt.error{
+  color: #721c24;
+  display: block;
+  background: #f8d7da;
+  border: 1px solid #f5c6cb;
+}
+.input-part .info-txt.pending{
+  color: #0c5460;
+  display: block;
+  background: #d1ecf1;
+  border: 1px solid #bee5eb;
+}
+/* css for input part and button */
+.input-part :where(input, button){
+  width: 100%;
+  height: 55px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  border-radius: 7px;
+}
+/* css for input field */
+.input-part input{
+  text-align: center;
+  padding: 0 15px;
+  border: 2px solid #ccc;
+}
+.input-part input:is(:focus, :valid){
+  border: 2px solid #43AFFC;
+}
+.input-part input::placeholder{
+  color: #a71f1f;
+}
+.input-part .separator{
+  height: 1px;
+  width: 100%;
+  margin: 25px 0;
+  background: #ccc;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.separator::before{
+  content: "or";
+  color: #b3b3b3;
+  font-size: 19px;
+  padding: 0 15px;
+  background: #fff;
+}
+.input-part button{
+  color: #fff;
+  cursor: pointer;
+  background: #43AFFC;
+  transition: 0.3s ease;
+}
+.input-part button:hover{
+  background: #1d9ffc;
+}
+/* to hide weather details before city name entered */
+.wrapper .weather-part1, .weather-part2, .weather-part3{
+  display: none;
+  margin: 30px 0 0;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+/* making visible when city name entered */
+.wrapper.active .weather-part1,
+.wrapper.active .weather-part2,
+.wrapper.active .weather-part3{
+  display: flex;
+}
+
+/* weather icon css */
+.weather-part1 img,
+.weather-part2 img,
+.weather-part3 img{
+  max-width: 125px;
+}
+
+/* temperature both numb and deg css */
+.weather-part1 .temp,
+.weather-part2 .temp,
+.weather-part3 .temp{
+  display: flex;
+  font-weight: 500;
+  font-size: 72px;
+  margin-bottom: 8px;
+}
+/* temperature in celsius */
+.weather-part1 .temp .numb,
+.weather-part2 .temp .numb,
+.weather-part3 .temp .numb{
+  font-weight: 600;
+}
+
+/* degrees css */
+.weather-part1 .temp .deg,
+.weather-part2 .temp .deg,
+.weather-part3 .temp .deg{
+  font-size: 40px;
+  display: block;
+  margin: 10px 5px 0 0;
+}
+/* weather descrption -->clearsky*/
+.weather-part1 .weather,
+.weather-part2 .weather,
+.weather-part3 .weather{
+  font-size: 21px;
+  text-align: center;
+  margin: -5px 20px 15px;
+}
+/* location css */
+.weather-part1 .location,
+.weather-part2 .location,
+.weather-part3 .location{
+  display: flex;
+  font-size: 19px;
+  padding: 0 20px;
+  text-align: center;
+  margin-bottom: 30px;
+  align-items: flex-start;
+}
+/* loction icon styles */
+.location i{
+  font-size: 22px;
+  margin: 4px 5px 0 0;
+}
+/* bottom details css */
+.weather-part1 .bottom-details,
+.weather-part2 .bottom-details,
+.weather-part3 .bottom-details{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  border-top: 1px solid #ccc;
+}
+/* bottom part css making that temp and humditity side by side */
+.bottom-details .column{
+  display: flex;
+  width: 100%;
+  padding: 15px 0;
+  align-items: center;
+  justify-content: center;
+}
+/* bottom temp and humidity percent css */
+.details .temp, .humidity span{
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: -3px;
+}
+.column.humidity{
+  border-left: 1px solid #ccc;
+}
+.column .details{
+  margin-left: 3px;
+}
+.details .temp .deg{
+  margin: 0;
+  font-size: 17px;
+  padding: 0 2px 0 1px;
+}
+/* Humidity name css */
+.column .details p{
+  font-size: 14px;
+  margin-top: 3px;
+}
+/* thermemeter and drop icon css */
+.column i{
+  color: #5DBBFF;
+  font-size: 40px;
+}
+/* to make appear weathers side by side */
+ .wrapper.active .cards{
+  display: flex;
+  padding-left: 10px;
+  justify-content: space-evenly;
+}

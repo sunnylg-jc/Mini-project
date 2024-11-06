@@ -1,0 +1,81 @@
+/* home page css */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("icons/weather.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 120vh;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+/* header css */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 22px;
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70vw;
+    padding: 12px 8px;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    color: rgb(35, 229, 184);
+    font-size: larger;
+}
+
+a {
+    margin: 1vw;
+    text-decoration: none;
+    color: rgb(35, 229, 184);
+    padding: 12px;
+    font-size: larger;
+
+}
+
+a:hover {
+    background-color: white;
+    color: #355dee;
+    border-radius: 1020px;
+}
+/* home page content css */
+.content{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 12px;
+    margin: 52px;
+}
+.content p{
+    font-size: x-large;
+    line-height: 1.5;
+    color: aliceblue;
+    width:50vw;
+    margin: 2px;
+
+}
+.content img{
+    border-radius: 6%; 
+ }
+ /* footer css */
+ .contact .icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ .copy{
+    margin-bottom: 52px;
+    font-size: larger;
+ }

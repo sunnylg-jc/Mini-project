@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>To-Do Application with Weather Integration</title>
+  <link rel="stylesheet" type="text/css" href="style3.css">
+  <link rel="stylesheet" type="text/css" href="style1.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="head">
+            <div class="left">
+                <h2>Weather App</h2>
+            </div>
+            <div class="right">
+                <a href="weather.html">View Weather</a>
+                <a href="game.html">Game</a>
+                <a href="todo.html">TODos</a>
+                <a href="home.html">Home</a>
+            </div>
+        </div>
+    </div>
+
+
+  <h1 class="headingp">To-Do Application with Weather Integration</h1>
+  <p class="message"></p>
+  <form id="task-form">
+    <input type="text" id="task-input" placeholder="Enter Task Description" required>
+    <select id="task-category">
+      <option value="indoor">Indoor</option>
+      <option value="outdoor">Outdoor</option>
+    </select>
+    <input type="text" id="city-input" placeholder="Enter City Name" required>
+    <button type="submit">Add Task</button>
+  </form>
+  <h2 style="color:rgb(225, 216, 99)">Task List</h2>
+  <ul id="task-list">
+  </ul>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="todo.js"></script>
+</body>
+</html>

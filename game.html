@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Weather Prediction Game</title>
+  <!-- Linking BoxIcon for Icon -->
+  <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" type="text/css" href="style1.css">
+  <link rel="stylesheet" type="text/css" href="style2.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="head">
+      <div class="left">
+        <h2>Weather App</h2>
+      </div>
+      <div class="right">
+        <a href="weather.html">View Weather</a>
+        <a href="game.html">Game</a>
+        <a href="todo.html">TODos</a>
+        <a href="home.hmtl">Home</a>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="box">
+    <div id="container">
+      <div class="header" style="display: flex;align-items: center;">
+        <a href="game.html"><i class='bx bx-left-arrow-alt' style="font-size: 30px; margin: 8px;"></i></a>
+        <h1>Weather Prediction Game</h1>
+      </div>
+      <p id="message"></p>
+      <form id="location-form">
+        <label for="location">Enter your location:</label>
+        <input type="text" id="location" name="location" placeholder="enter location" required>
+        <button type="submit">Submit</button>
+      </form>
+      <div id="weather-data" class="weather-data">
+        <div id="current-weather">
+          <h2>Current Weather</h2>
+          <p id="current-weather-data"></p>
+        </div>
+        <div id="prediction-form">
+          <h2>Make a Prediction</h2>
+          <form>
+            <label for="prediction">What will the weather be like tomorrow?</label>
+            <select id="prediction" name="prediction">
+              <option value="haze">haze</option>
+              <option value="sunny">Sunny</option>
+              <option value="cloudy">Cloudy</option>
+              <option value="rainy">Rainy</option>
+              <option value="snowy">Snowy</option>
+            </select>
+            <button type="submit" class="psubmit">Submit Prediction</button>
+          </form>
+          <p id="message1"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="game.js"></script>
+</body>
+
+</html>
